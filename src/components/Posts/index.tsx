@@ -2,9 +2,9 @@ import Container from 'components/UI/Container'
 import TitleSection from 'components/UI/TitleSection'
 import { motion } from 'framer-motion'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import Link from 'gatsby-link'
-import { ImageSharpFluid, SectionTitle } from 'helpers/definitions'
+import { SectionTitle } from 'helpers/definitions'
 import React from 'react'
 
 import * as Styled from './styles'
@@ -22,7 +22,7 @@ interface Post {
       tags: string[]
       cover: {
         childImageSharp: {
-          fluid: ImageSharpFluid
+          fluid: FluidObject
         }
       }
     }

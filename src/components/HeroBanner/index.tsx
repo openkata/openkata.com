@@ -1,7 +1,6 @@
 import Container from 'components/UI/Container'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import { ImageSharpFluid } from 'helpers/definitions'
+import Img, { FluidObject } from 'gatsby-image'
 import React from 'react'
 
 import * as Styled from './styles'
@@ -19,7 +18,7 @@ const HeroBanner: React.FC = () => {
     }
   `)
 
-  const logoImage: ImageSharpFluid = placeholderImage.childImageSharp.fluid
+  const logoImage: FluidObject = placeholderImage.childImageSharp.fluid
 
   return (
     <Container section>

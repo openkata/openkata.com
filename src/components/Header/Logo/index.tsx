@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import { ImageSharpFixed } from 'helpers/definitions'
+import Img, { FixedObject } from 'gatsby-image'
 import React from 'react'
 
 import * as Styled from './styles'
@@ -24,7 +23,7 @@ const Logo: React.FC = () => {
   `)
 
   const logoTitle: string = site.siteMetadata.title
-  const logoImage: ImageSharpFixed = placeholderImage.childImageSharp.fixed
+  const logoImage: FixedObject = placeholderImage.childImageSharp.fixed
 
   return (
     <Styled.Logo to="/">
